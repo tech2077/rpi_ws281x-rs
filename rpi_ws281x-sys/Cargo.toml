@@ -3,4 +3,7 @@ name = "rpi_ws281x-sys"
 version = "0.1.0"
 authors = ["Matthew Skolaut <mskolaut@tamu.edu>"]
 
+[build-dependencies]
+gcc = "0.3"
+
 [dependencies]
