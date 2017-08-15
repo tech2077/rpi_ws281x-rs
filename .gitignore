@@ -1,4 +1,6 @@
 /rpi_ws281x-sys/target
+.idea/
+*iml
 /target/
 **/*.rs.bk
 Cargo.lock
