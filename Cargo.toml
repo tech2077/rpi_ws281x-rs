@@ -1,0 +1,6 @@
+[package]
+name = "rpi_ws281x"
+version = "0.1.0"
+authors = ["Matthew Skolaut <mskolaut@tamu.edu>"]
+
+[dependencies]
