@@ -58,10 +58,10 @@ pub struct rpi_hw_t {
 #[repr(C)]
 #[derive(Debug, Copy)]
 pub struct ws2811_channel_t {
-    pub gpionum: c_int,
-    pub invert: c_int,
-    pub count: c_int,
-    pub strip_type: c_int,
+    pub gpionum: u8,
+    pub invert: u8,
+    pub count: u32,
+    pub strip_type: c_uint,
     pub leds: *mut ws2811_led_t,
     pub brightness: u8,
     pub wshift: u8,
