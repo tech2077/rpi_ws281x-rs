@@ -39,7 +39,6 @@ pub enum ws2811_return_t {
     WS2811_ERROR_SPI_TRANSFER = -14,
 }
 
-#[repr(C)]
 pub enum ws2811_device {}
 
 pub type ws2811_led_t = u32;
