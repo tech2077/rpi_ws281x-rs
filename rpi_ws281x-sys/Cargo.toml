@@ -2,6 +2,7 @@
 name = "rpi_ws281x-sys"
 version = "0.1.0"
 authors = ["Matthew Skolaut <mskolaut@tamu.edu>"]
+build = "build.rs"
 
 [lib]
 name = "rpi_ws281x_sys"
