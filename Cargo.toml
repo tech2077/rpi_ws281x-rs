@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Matthew Skolaut <mskolaut@tamu.edu>"]
 
 [dependencies]
+rpi_ws281x-sys = {version = "0.1", path = "rpi_ws281x-sys"}
