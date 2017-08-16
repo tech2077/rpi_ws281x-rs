@@ -2,22 +2,22 @@ use std::os::raw::*;
 
 pub const RPI_PWM_CHANNELS: c_uint = 2;
 pub const WS2811_TARGET_FREQ: c_uint = 800000;
-pub const SK6812_STRIP_RGBW: c_int = 403703808;
-pub const SK6812_STRIP_RBGW: c_int = 403701768;
-pub const SK6812_STRIP_GRBW: c_int = 403181568;
-pub const SK6812_STRIP_GBRW: c_int = 403177488;
-pub const SK6812_STRIP_BRGW: c_int = 402657288;
-pub const SK6812_STRIP_BGRW: c_int = 402655248;
+pub const SK6812_STRIP_RGBW: c_uint = 403703808;
+pub const SK6812_STRIP_RBGW: c_uint = 403701768;
+pub const SK6812_STRIP_GRBW: c_uint = 403181568;
+pub const SK6812_STRIP_GBRW: c_uint = 403177488;
+pub const SK6812_STRIP_BRGW: c_uint = 402657288;
+pub const SK6812_STRIP_BGRW: c_uint = 402655248;
 pub const SK6812_SHIFT_WMASK: c_uint = 4026531840;
-pub const WS2811_STRIP_RGB: c_int = 1050624;
-pub const WS2811_STRIP_RBG: c_int = 1048584;
-pub const WS2811_STRIP_GRB: c_int = 528384;
-pub const WS2811_STRIP_GBR: c_int = 524304;
-pub const WS2811_STRIP_BRG: c_int = 4104;
-pub const WS2811_STRIP_BGR: c_int = 2064;
-pub const WS2812_STRIP: c_int = 528384;
-pub const SK6812_STRIP: c_int = 528384;
-pub const SK6812W_STRIP: c_int = 403181568;
+pub const WS2811_STRIP_RGB: c_uint = 1050624;
+pub const WS2811_STRIP_RBG: c_uint = 1048584;
+pub const WS2811_STRIP_GRB: c_uint = 528384;
+pub const WS2811_STRIP_GBR: c_uint = 524304;
+pub const WS2811_STRIP_BRG: c_uint = 4104;
+pub const WS2811_STRIP_BGR: c_uint = 2064;
+pub const WS2812_STRIP: c_uint = 528384;
+pub const SK6812_STRIP: c_uint = 528384;
+pub const SK6812W_STRIP: c_uint = 403181568;
 
 #[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
