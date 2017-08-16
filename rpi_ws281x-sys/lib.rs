@@ -45,7 +45,6 @@ pub type ws2811_led_t = u32;
 
 
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct rpi_hw_t {
     pub type_: u32,
     pub hwver: u32,
@@ -56,7 +55,6 @@ pub struct rpi_hw_t {
 
 
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct ws2811_channel_t {
     pub gpionum: u8,
     pub invert: u8,
@@ -71,7 +69,6 @@ pub struct ws2811_channel_t {
 }
 
 #[repr(C)]
-#[derive(Debug, Copy)]
 pub struct ws2811_t {
     pub render_wait_time: u64,
     pub device: *mut ws2811_device,
@@ -79,19 +76,6 @@ pub struct ws2811_t {
     pub freq: u32,
     pub dmanum: c_int,
     pub channel: [ws2811_channel_t; 2usize],
-}
-
-
-impl Clone for rpi_hw_t {
-    fn clone(&self) -> Self { *self }
-}
-
-impl Clone for ws2811_channel_t {
-    fn clone(&self) -> Self { *self }
-}
-
-impl Clone for ws2811_t {
-    fn clone(&self) -> Self { *self }
 }
 
 extern "C" {
