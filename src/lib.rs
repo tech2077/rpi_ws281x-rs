@@ -87,4 +87,5 @@ impl Drop for WS281x {
     }
 }
 
+unsafe impl Send for WS281x { }
 unsafe impl Sync for WS281x { }
