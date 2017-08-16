@@ -33,7 +33,7 @@ impl WS281x {
                 freq: 800000,
                 dmanum: 5,
                 channel:
-                [ffi::ws2811_channel_t { gpionum: port, count: count, invert: 0, brightness: 255, strip_type: stype, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 },
+                [ffi::ws2811_channel_t { gpionum: port as i32, count: count as i32, invert: 0, brightness: 255, strip_type: stype as u32, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 },
                  ffi::ws2811_channel_t { gpionum: 0,  count: 0, invert: 0, brightness: 0,   strip_type: 0, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 }],
                 device: ptr::null_mut(),
                 rpi_hw: ptr::null_mut(),
