@@ -30,11 +30,7 @@ impl WS281x {
         }
     }
 
-    pub fn set_color(&mut self, r: u8, g: u8, b: u8) {
-        let c: u32 =
-            ((r as u32) << self.strip.channel[0].rshift) &
-            ((g as u32) << self.strip.channel[0].gshift) &
-            ((b as u32) << self.strip.channel[0].bshift);
+    pub fn set_color(&mut self, c: u32) {
         for i in 0..self.length {
             unsafe {
                 std::ptr::write(self.strip.channel[0].leds.offset(i as isize), c);
