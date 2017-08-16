@@ -2,6 +2,9 @@
 name = "rpi_ws281x"
 version = "0.1.0"
 authors = ["Matthew Skolaut <mskolaut@tamu.edu>"]
+license = "MIT/Apache-2.0"
+keywords = ["ws8211", "rpi"]
+repository = "https://github.com/tech2077/rpi_ws281x-rs"
 
 [dependencies]
 rpi_ws281x-sys = {version = "0.1", path = "rpi_ws281x-sys"}

@@ -86,3 +86,5 @@ impl Drop for WS281x {
         }
     }
 }
+
+unsafe impl Sync for rpi_ws281x::WS281x { }
