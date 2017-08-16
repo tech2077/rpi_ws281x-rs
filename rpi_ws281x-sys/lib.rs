@@ -78,6 +78,10 @@ pub struct ws2811_t {
     pub channel: [ws2811_channel_t; 2usize],
 }
 
+unsafe impl Sync for rpi_hw_t { }
+unsafe impl Sync for ws2811_device { }
+unsafe impl Sync for *mut u32 { }
+
 extern "C" {
     pub fn ws2811_init(ws2811: *mut ws2811_t) -> ws2811_return_t;
     pub fn ws2811_fini(ws2811: *mut ws2811_t);
