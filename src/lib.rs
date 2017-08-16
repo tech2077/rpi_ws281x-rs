@@ -14,7 +14,7 @@ impl WS281x {
                 freq: 800000,
                 dmanum: 5,
                 channel:
-                [ffi::ws2811_channel_t { gpionum: 21, count: 1, invert: 0, brightness: 255, strip_type: ffi::WS2811_STRIP_GRB, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 },
+                [ffi::ws2811_channel_t { gpionum: 21, count: 20, invert: 0, brightness: 255, strip_type: ffi::WS2811_STRIP_GRB, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 },
                  ffi::ws2811_channel_t { gpionum: 0,  count: 0, invert: 0, brightness: 0,   strip_type: 0, leds: ptr::null_mut(), wshift: 0, rshift: 0, gshift: 0, bshift: 0 }],
                 device: ptr::null_mut(),
                 rpi_hw: ptr::null_mut(),
@@ -40,6 +40,7 @@ impl WS281x {
 
         unsafe {
             ffi::ws2811_render(&mut self.strip as *mut ffi::ws2811_t);
+            ffi::ws2811_wait(&mut self.strip as *mut ffi::ws2811_t);
         }
     }
 }
