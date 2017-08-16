@@ -19,7 +19,7 @@ pub const WS2812_STRIP: c_int = 528384;
 pub const SK6812_STRIP: c_int = 528384;
 pub const SK6812W_STRIP: c_int = 403181568;
 
-#[repr(u32)]
+#[repr(i32)]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum ws2811_return_t {
     WS2811_SUCCESS = 0,
