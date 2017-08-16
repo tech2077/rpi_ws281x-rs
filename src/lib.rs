@@ -31,7 +31,7 @@ impl WS281x {
     }
 
     pub fn set_color(&mut self, r: u8, g: u8, b: u8) {
-        let c: u32 = (r << 4) & (g << 2) & b;
+        let c: u32 = ((r as u32) << 4) & ((g as u32) << 2) & (b as u32);
         for i in 0..self.length {
             unsafe {
                 std::ptr::write(self.strip.channel[0].leds.offset(i as isize), c);
@@ -39,7 +39,7 @@ impl WS281x {
         }
 
         unsafe {
-            ffi::ws2811_render(&mut self.strip as *mut ffi::ws2811_t)
+            ffi::ws2811_render(&mut self.strip as *mut ffi::ws2811_t);
         }
     }
 }
