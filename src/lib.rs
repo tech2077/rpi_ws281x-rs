@@ -24,7 +24,7 @@ impl WS281x {
             let ret = ffi::ws2811_init(&mut dev as *mut ffi::ws2811_t);
 
             match ret {
-                ffi::ws2811_return_t::WS2811_SUCCESS => Ok(WS281x {strip: dev, length: 1 }),
+                ffi::ws2811_return_t::WS2811_SUCCESS => Ok(WS281x {strip: dev, length: 20 }),
                 e => Err(e as i32)
             }
         }
