@@ -79,6 +79,7 @@ pub struct ws2811_t {
 }
 
 unsafe impl Sync for rpi_hw_t { }
+unsafe impl Sync for ws2811_t { }
 unsafe impl Sync for ws2811_device { }
 
 extern "C" {
